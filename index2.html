@@ -15,11 +15,13 @@
         <div class="container">
             <nav>
                 <h2 class="logo">Yazi</h2>
-                <ul>
+                <ul id="side-menu">
                     <li><a href="index2.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contactMe">Contact Me</a></li>
+                    <i class="fa-sharp display-none fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fa-sharp display-none fa-solid fa-bars fa-beat-fade" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
 
@@ -150,31 +152,7 @@
    <script src="https://kit.fontawesome.com/775501fd85.js" crossorigin="anonymous"></script>
    <script>
 
-    function display (label){
-        const ed = document.querySelector('.js-ed')
-        const skill = document.querySelector('.js-section')
-        const prj = document.querySelector('.js-prj')
-        if (label === 'education'){
-            ed.classList.add("section-ed-aftr")
-            skill.classList.add('skills-section-aftr')
-            prj.classList.remove('section-prj-aftr')
-
-            
-        }else if (label === 'project'){
-            prj.classList.add('section-prj-aftr')
-            ed.classList.remove('section-ed-aftr')
-            skill.classList.add('skills-section-aftr')
-
-
-        }else if (label === 'skills'){
-            skill.classList.add('section-main')
-            skill.classList.remove('skills-section-aftr')
-            prj.classList.remove('section-prj-aftr')
-            ed.classList.remove('section-ed-aftr')
-
-        }
-
-    }
+    
     
     
    </script>
