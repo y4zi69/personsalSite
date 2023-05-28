@@ -1,3 +1,52 @@
-@media screen {
+@media only screen and (max-width: 700px){ 
+    header{
+        background-image: url(image/gokuforphone.jpg);
+    }
+    .interested-feild{
+        margin-top: 0;
+        font-size: medium;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-col-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .titles{
+        position: static;
+        width: 150px;
+        margin-right: 155px;
+        margin-left: 50px;
+    }
+    .links{
+        font-size: 13px;
+
+    }
+    .contents {
+        width: 200px;
+
+    }
+   
+        
+    }
+    .name,.phone,.email,.textarea{
+        width: 191px;
+        height: 25px ;
+    }
+    .textarea{
+        margin-top:5px ;
+        margin-left: 0;
+        height: 200px;
+        overflow: hidden;
+        
+    }.btn-submit{
+        margin-left: 50px;
+        margin-right:10px ;
+    }
     
-}
+
+    
