@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     
 </head>
@@ -117,15 +118,15 @@
     <div class="contact">
         <h1>Contact Me</h1>
         <div class="details-section">
-            <form action="" class="form-style">
+            <form method="post" action="" class="form-style" id="gform">
                 <div class="input-field">
                     <label for="">Name*</label>
-                    <input type="text" class="name" placeholder="Name*">
+                    <input type="text" class="Name" placeholder="Name*" minlength="3" maxlength="20">
                     <label for="">Phone</label>
-                    <input type="tel" class="phone" placeholder="Optional">
+                    <input type="tel" class="Phone" placeholder="Optional">
                     <label for="">Email*</label>
-                    <input type="email" name="" id="" class="email" placeholder="email@.com*">
-                    <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Type your message here....."></textarea>
+                    <input type="email" required name="Email" id="" class="email" placeholder="email@.com*">
+                    <textarea class="textarea" name="Message" id="" cols="30" rows="10" placeholder="Type your message here....."></textarea>
                     <input type="submit" value="Submit" class="btn-submit">
                 </div>
             </form>
@@ -145,8 +146,8 @@
    </footer>
     
 
-
-
+   <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
    <script src="index2.js"></script>
    <script src="https://kit.fontawesome.com/775501fd85.js" crossorigin="anonymous"></script>

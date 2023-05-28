@@ -34,3 +34,33 @@ function openMenu(){
 function closeMenu(){
     sideMenu.style.right = '-200px';
 }
+
+$("#gform").submit((e)=>{
+    e.preventDefault()
+    $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbwFQAnxhVuGEl7lCZLhyl-iktnGRqGntPKJmU2LVjxI9mAA6UmwUN2LXZf_mKzTlxP87w/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            window.location.href="index.html"
+        },
+        error:function (err){
+            alert("Something Error")
+
+        }
+    })
+})
+$(document).ready(function(){
+    $("#gform").validate({
+        rules:{
+            Name:{
+                required:true,
+                minlength:4
+            }
+
+        }
+    })
+
+})
