@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="responsive.css">
 
     
 </head>
@@ -15,12 +16,9 @@
             <nav>
                 <h2 class="logo">Yazi</h2>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
-                    
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contactMe">Contact Me</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -35,7 +33,6 @@
             <div class="row">
                 <div class="about-col-1">
                     <img src="image/sunnaran.jpg" alt="" class="sunnaran">
-
                 </div>
                 <div class="about-col-2">
                     <h1 class="about-me">About</h1>
@@ -48,38 +45,31 @@
                      he finds new friends who follow him on his journey to become a stronger fighter. As Goku grows up, he becomes the Earth's mightiest warrior 
                      and battles a wide variety of villains with the help of his friends and family, while also gaining new allies in the process.
                     </p>
-
                     <div class="titles">
-                        <p class="links active">Skills</p>
-                        <p class="links" onclick="displayEducation()">Education</p>
-                        <p class="links">Projects</p>
+                        <p class="links active" onclick="display('skills')">Skills</p>
+                        <p class="links" onclick="display('education')">Education</p>
+                        <p class="links" onclick="display('project')" >Projects</p>
                     </div>
                     <div class="contents active-tab">
-                        <div class="skills-section">
+                        <div class="section-main js-section" id="div1">
                             <p>HTML</p>
                             <div class="html">
-                                
                                 <div class="skills-bar-container">
                                  <div class="skills-bars html"></div>
                                 </div>
                             </div>
-
                             <p>CSS</p>
                             <div class="css">
-                                
                                 <div class="skills-bar-container">
                                  <div class="skills-bars css"></div>
                                 </div>
                             </div>
-
                             <p>JavaScript</p>
-                            <div class="js">
-                                
+                            <div class="js">                               
                                 <div class="skills-bar-container">
-                                <div class="skills-bars js"></div>
+                                 <div class="skills-bars js"></div>
                                 </div>
                             </div>
-
                             <p>Python</p>
                             <div class="python">
                                 <div class="skills-bar-container">
@@ -87,7 +77,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="education">
+                        <div class="section-ed js-ed" id="div2">
                             <ul>
                                 <li>
                                     <h2>Bachelors Degree</h2>
@@ -105,25 +95,88 @@
                                     <h2>High School</h2>
                                     <p>I completed my secondary education a Snvhss</p>
                                     <h3>End Year - 2020</h3>
-                                    <div>---------------------------------------------</div>
                                 </li>
                             </ul>
-                            
                         </div>
-                        <div class="projects">
-                            <p>working on it 🤣</p>
+                        <div class="section-prj js-prj">
+                            <ul>
+                                <li><a href="https://y4zi69.github.io/projects/" class="decoration-a"><h2>Rock-Paper-Scissors</h2></a></li>
+                                <li><a href="" class="decoration-a"><h2>YouTube Clone</h2></a></li>
+                                <li><a href="https://y4zi69.github.io/yazzi/" class="decoration-a"><h2>About Anime</h2></a></li>
+                                <li class="working"><h2>Working.....</h2></li>
+                            </ul>
                         </div>
-                        
-
                     </div>
-
                 </div>
-                
             </div>
+        </div>
+    </div>
+   <section id="contactMe">
+    <div class="contact">
+        <h1>Contact Me</h1>
+        <div class="details-section">
+            <form action="" class="form-style">
+                <div class="input-field">
+                    <label for="">Name*</label>
+                    <input type="text" class="name" placeholder="Name*">
+                    <label for="">Phone</label>
+                    <input type="tel" class="phone" placeholder="Optional">
+                    <label for="">Email*</label>
+                    <input type="email" name="" id="" class="email" placeholder="email@.com*">
+                    <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Type your message here....."></textarea>
+                    <input type="submit" value="Submit" class="btn-submit">
+                </div>
+            </form>
+
+            
         </div>
 
     </div>
+   </section>
+   <footer>
+    <div class="footer-row">
+
+        <a class="social-logo" target="_blank" href="https://www.instagram.com/yazi.___/"><i class="fa-brands fa-instagram insta-logo"></i></a>
+        <a class="social-logo" target="_blank" href="https://www.snapchat.com/add/y_4z1?share_id=Wno4j2xOtFs&locale=en-IN"><i class="fa-brands fa-snapchat snap-logo"></i></a>
+        <a class="social-logo" target="_blank" href="https://www.facebook.com/profile.php?id=100017338000163"><i class="fa-brands fa-facebook fb-logo"></i></a>
+    </div>
+   </footer>
     
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
    <script src="index2.js"></script>
+   <script src="https://kit.fontawesome.com/775501fd85.js" crossorigin="anonymous"></script>
+   <script>
+
+    function display (label){
+        const ed = document.querySelector('.js-ed')
+        const skill = document.querySelector('.js-section')
+        const prj = document.querySelector('.js-prj')
+        if (label === 'education'){
+            ed.classList.add("section-ed-aftr")
+            skill.classList.add('skills-section-aftr')
+            prj.classList.remove('section-prj-aftr')
+
+            
+        }else if (label === 'project'){
+            prj.classList.add('section-prj-aftr')
+            ed.classList.remove('section-ed-aftr')
+            skill.classList.add('skills-section-aftr')
+
+
+        }else if (label === 'skills'){
+            skill.classList.add('section-main')
+            skill.classList.remove('skills-section-aftr')
+            prj.classList.remove('section-prj-aftr')
+            ed.classList.remove('section-ed-aftr')
+
+        }
+
+    }
+    
+    
+   </script>
 </body>
 </html>
