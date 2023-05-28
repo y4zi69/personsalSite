@@ -34,12 +34,23 @@ function openMenu(){
 function closeMenu(){
     sideMenu.style.right = '-200px';
 }
+$().ready(function(){
+    $("#gform").validate({
+        rules:{
+            Name:{
+                required:true,
+                minlength:4
+            }
 
+        }
+    })
+
+})
 $("#gform").submit((e)=>{
     e.preventDefault()
     $.ajax({
         url:"https://script.google.com/macros/s/AKfycbwFQAnxhVuGEl7lCZLhyl-iktnGRqGntPKJmU2LVjxI9mAA6UmwUN2LXZf_mKzTlxP87w/exec",
-        data:$("#submit-form").serialize(),
+        data:$("#gform").serialize(),
         method:"post",
         success:function (response){
             alert("Form submitted successfully")
@@ -51,16 +62,4 @@ $("#gform").submit((e)=>{
 
         }
     })
-})
-$(document).ready(function(){
-    $("#gform").validate({
-        rules:{
-            Name:{
-                required:true,
-                minlength:4
-            }
-
-        }
-    })
-
 })
