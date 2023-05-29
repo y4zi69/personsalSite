@@ -197,7 +197,7 @@
   
   
 }
-.Name,.Phone,.email {
+.name,.Phone,.email {
   width: 500px;
   height: 3rem;
   border-radius: .5rem;

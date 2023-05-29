@@ -37,7 +37,7 @@ function closeMenu(){
 $().ready(function(){
     $("#gform").validate({
         rules:{
-            Name:{
+            name:{
                 required:true,
                 minlength:4
             }

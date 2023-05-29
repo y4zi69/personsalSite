@@ -25,7 +25,7 @@
         width: 200px;
 
     }
-    .Name,.Phone,.email,.textarea{
+    .name,.Phone,.email,.textarea{
         width: 191px;
         height: 25px ;
     }
@@ -91,7 +91,7 @@
     }.section-main{
         width: 400px;
     }
-    .Name,.Phone,.email,.textarea{
+    .name,.Phone,.email,.textarea{
         width: 300px;
         height: 25px ;
     }.textarea{
