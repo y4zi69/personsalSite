@@ -243,6 +243,7 @@ footer {
 .decoration-a {
   color: white;
   text-decoration: none;
+  white-space: nowrap;
 }
 .decoration-a h2{
   transition:1s ease;
